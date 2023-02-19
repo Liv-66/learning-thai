@@ -6,6 +6,10 @@ const app = express();
 // Serve the files in /assets at the URI /assets.
 app.use('/assets', express.static('assets'));
 
+// Require and use body-parser to parse the request body.
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 // The HTML content is produced by rendering a handlebars template.
 // The template values are stored in global state for reuse.
 const data = {
@@ -40,12 +44,37 @@ app.get('/', async (req, res) => {
 app.get('/api/quiz', async (req, res) => {
   const consonantData = [['ก', 'chicken', 'M'], ['ข', 'egg', 'H'], ['ฃ', 'bottle', 'H'], ['ค', 'buffalo', 'L'], ['ฅ', 'person', 'L'], ['ฆ', 'bell', 'L'], ['ง', 'snake', 'L'], ['จ', 'plate_dish', 'M'], ['ฉ', 'cymbal', 'H'], ['ช', 'elephant', 'L'], ['ซ', 'chain', 'L'], ['ฌ', 'tree', 'L'], ['ญ', 'woman', 'L'], ['ฎ', 'headdress', 'M'], ['ฏ', 'goad', 'M'], ['ฐ', 'base', 'H'], ['ฑ', 'actress_name', 'L'], ['ฒ', 'old_person', 'L'], ['ณ', 'novice monk', 'L'], ['ด', 'child', 'M'], ['ต', 'turtle', 'M'], ['ถ', 'bag_sack', 'H'], ['ท', 'solider', 'L'], ['ธ', 'flag', 'L'], ['น', 'mouse', 'L'], ['บ', 'leaf', 'M'], ['ป', 'fish', 'M'], ['ผ', 'bee', 'H'], ['ฝ', 'lid', 'H'], ['พ', 'kind_of_tray', 'L'], ['ฟ', 'tooth_teeth', 'L'], ['ภ', 'sailboat', 'L'], ['ม', 'horse', 'L'], ['ย', 'ogre', 'L'], ['ร', 'boat', 'L'], ['ล', 'monkey', 'L'], ['ว', 'ring', 'L'], ['ศ', 'pavilion', 'H'], ['ษ', 'hermit', 'H'], ['ส', 'tiger', 'H'], ['ห', 'chest', 'H'], ['ฬ', 'kind_of_kite', 'L'], ['อ', 'basin', 'S'], ['ฮ', 'owl', 'L']];
   const vowelData = [['อะ', 'a', '[a]'], ['อา', 'aa', '[aː]'], ['อิ', 'i', '[i]'], ['อี', 'ii', '[iː]'], ['อึ', 'ue', '[ɯ]'], ['อื', 'uee', '[ɯː]'], ['อุ', 'u', '[u]'], ['อู', 'uu', '[uː]'], ['เอะ', 'e', '[e]'], ['เอ', 'ay', '[eː]'], ['เเอะ', 'ae’', '[ɛ]'], ['เเอ', 'ae', '[ɛː]'], ['โอะ', 'o', '[o]'], ['โอ', 'oh', '[oː]'], ['เอาะ', 'or’', '[ɔ]'], ['ออ', 'or', '[ɔː]'], ['เออะ', 'oe’', '[ɤ]'], ['เออ', 'oe', '[ɤː]'], ['เอียะ', 'ia’', '[ia]'], ['เอีย', 'ia', '[iaː]'], ['เอือะ', 'uea’', '[ɯa]'], ['เอือ', 'uea', '[ɯaː]'], ['อัวะ', 'ua’', '[ua]'], ['อัว', 'ua', '[uaː]'], ['อ ํา', 'am', '[am]'], ['เอา', 'ao', '[ao]'], ['ไอ', 'ai', '[ai]'], ['ใอ', 'ai', '[ai]'], ['ไอย', 'ai', '[ai]'], ['อัย', 'ai', '[ai]'], ['ฤ', 'rue', '[rue]'], ['ฤๅ', 'ruee', '[rueː]'], ['ฦ', 'lue', '[lue]'], ['ฦๅ', 'luee', '[lueː]']];
-
   let data = {
     consonantData,
-    vowelData
+    vowelData,
   };
+  try {
+    // Create db connection from utils/db.js
+    const db = require('./utils/db.js');
+    // Get data from db
+    const vocabularies = await db.getVocabularies();
+
+    data.vocabularies = vocabularies;
+  } catch (e) {
+    console.error(e);
+    data.vocabularies = e.message;
+  }
   res.status(200).send(data);
+});
+
+// Post data to insert into db table: vocabularies
+app.post('/api/vocabularies', async (req, res) => {
+  try {
+    // Create db connection from utils/db.js
+    const db = require('./utils/db.js');
+    // Get data from db
+    await db.insertVocabularies(req.body);
+    const vocabularies = await db.getVocabularies();
+    res.status(200).send(vocabularies);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send(e.message);
+  }
 });
 
 const PORT = process.env.PORT || 8080;

@@ -51,3 +51,22 @@ em {
 .cta a:hover {
 	background-color: rgb(66, 133, 244, 0.9);
 }
+
+.insert-list {
+	position: absolute;
+	left: 2em;
+	top: 0.5em;
+	color: darkgray;
+}
+
+.insert-list p {
+	margin: 0;
+}
+
+.alert {
+	position: absolute;
+	bottom: 3em;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
+}

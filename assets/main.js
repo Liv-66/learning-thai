@@ -43,6 +43,8 @@ class Thai {
     const data = await response.json();
     this.consonantData = data.consonantData;
     this.vowelData = data.vowelData;
+    this.vocabularies = data.vocabularies;
+    console.log('vocabularies: ', data.vocabularies);
   };
 
   async init() {
@@ -148,6 +150,33 @@ class Thai {
   getQuizTypeIndex() {
     return this.quizTypeIndex;
   }
+
+  // Send data in req.body to server
+  async addVocab(thai, meaning) {
+    const data = { thai, meaning };
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+    const response = await fetch('/api/vocabularies', options);
+
+    if (response.ok) {
+      // Trigger alert-success to show the message
+      // and disappear after 1 seconds
+      document.getElementById('alert-success').style.display = 'block';
+      // Replace the text in the alert-success
+      document.getElementById('alert-success').textContent = thai + ' - ' + meaning;
+      setTimeout(() => {
+        document.getElementById('alert-success').style.display = 'none';
+      }, 1000);
+    } else {
+      alert('Error: ' + response.statusText);
+    }
+  }
+
   // So far, the following functions are not used
   /*
   insertList(lines) {
@@ -263,3 +292,12 @@ document.onkeydown = function (e) {
     document.getElementById('btn-next').click();
   }
 }
+
+// Press btn-add-vocab to add the word to the vocabulary list
+document.getElementById('btn-add-vocab').addEventListener('click', function () {
+  // Pass the vocab-thai, vocab-meaning of the submitted form to the addVocab function
+  thai.addVocab(
+    document.getElementById('vocab-thai').value,
+    document.getElementById('vocab-meaning').value,
+  );
+});
