@@ -17,8 +17,8 @@
     <h1>Alex's Thai Quiz</h1>
     {{!-- Topic type --}}
     <select id="select-topic-type">
-      <option value="0"> Consonant </option>
-      <option value="1"> Vowel </option>
+      <option value="consonant"> Consonant </option>
+      <option value="vowel"> Vowel </option>
     </select>
     {{!-- Quiz type --}}
     <select id="select-quiz-type">
@@ -38,7 +38,7 @@
   </div>
   <!-- Display cards and list of answers -->
   <div class="container" class="container py-4 px-3 mx-auto" style="text-align: -webkit-center; ">
-    <h1 id="list"></h1>
+    <div id="list"></div>
   </div>
   <div class="container py-2">
     <button class="btn btn-primary" id="btn-restart">Restart</button>
