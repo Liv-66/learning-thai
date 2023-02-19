@@ -1,0 +1,222 @@
+{
+  "1": {
+    "alphabet": "ก",
+    "meaning": "chicken",
+    "class": "M"
+  },
+  "2": {
+    "alphabet": "ข",
+    "meaning": "egg",
+    "class": "H"
+  },
+  "3": {
+    "alphabet": "ฃ",
+    "meaning": "bottle",
+    "class": "H"
+  },
+  "4": {
+    "alphabet": "ค",
+    "meaning": "buffalo",
+    "class": "L"
+  },
+  "5": {
+    "alphabet": "ฅ",
+    "meaning": "person",
+    "class": "L"
+  },
+  "6": {
+    "alphabet": "ฆ",
+    "meaning": "bell",
+    "class": "L"
+  },
+  "7": {
+    "alphabet": "ง",
+    "meaning": "snake",
+    "class": "L"
+  },
+  "8": {
+    "alphabet": "จ",
+    "meaning": "plate_dish",
+    "class": "M"
+  },
+  "9": {
+    "alphabet": "ฉ",
+    "meaning": "cymbal",
+    "class": "H"
+  },
+  "10": {
+    "alphabet": "ช",
+    "meaning": "elephant",
+    "class": "L"
+  },
+  "11": {
+    "alphabet": "ซ",
+    "meaning": "chain",
+    "class": "L"
+  },
+  "12": {
+    "alphabet": "ฌ",
+    "meaning": "tree",
+    "class": "L"
+  },
+  "13": {
+    "alphabet": "ญ",
+    "meaning": "woman",
+    "class": "L"
+  },
+  "14": {
+    "alphabet": "ฎ",
+    "meaning": "headdress",
+    "class": "M"
+  },
+  "15": {
+    "alphabet": "ฏ",
+    "meaning": "goad",
+    "class": "M"
+  },
+  "16": {
+    "alphabet": "ฐ",
+    "meaning": "base",
+    "class": "H"
+  },
+  "17": {
+    "alphabet": "ฑ",
+    "meaning": "actress_name",
+    "class": "L"
+  },
+  "18": {
+    "alphabet": "ฒ",
+    "meaning": "old_person",
+    "class": "L"
+  },
+  "19": {
+    "alphabet": "ณ",
+    "meaning": "novice_monk",
+    "class": "L"
+  },
+  "20": {
+    "alphabet": "ด",
+    "meaning": "child",
+    "class": "M"
+  },
+  "21": {
+    "alphabet": "ต",
+    "meaning": "turtle",
+    "class": "M"
+  },
+  "22": {
+    "alphabet": "ถ",
+    "meaning": "bag_sack",
+    "class": "H"
+  },
+  "23": {
+    "alphabet": "ท",
+    "meaning": "solider",
+    "class": "L"
+  },
+  "24": {
+    "alphabet": "ธ",
+    "meaning": "flag",
+    "class": "L"
+  },
+  "25": {
+    "alphabet": "น",
+    "meaning": "mouse",
+    "class": "L"
+  },
+  "26": {
+    "alphabet": "บ",
+    "meaning": "leaf",
+    "class": "M"
+  },
+  "27": {
+    "alphabet": "ป",
+    "meaning": "fish",
+    "class": "M"
+  },
+  "28": {
+    "alphabet": "ผ",
+    "meaning": "bee",
+    "class": "H"
+  },
+  "29": {
+    "alphabet": "ฝ",
+    "meaning": "lid",
+    "class": "H"
+  },
+  "30": {
+    "alphabet": "พ",
+    "meaning": "kind_of_tray",
+    "class": "L"
+  },
+  "31": {
+    "alphabet": "ฟ",
+    "meaning": "tooth_teeth",
+    "class": "L"
+  },
+  "32": {
+    "alphabet": "ภ",
+    "meaning": "sailboat",
+    "class": "L"
+  },
+  "33": {
+    "alphabet": "ม",
+    "meaning": "horse",
+    "class": "L"
+  },
+  "34": {
+    "alphabet": "ย",
+    "meaning": "ogre",
+    "class": "L"
+  },
+  "35": {
+    "alphabet": "ร",
+    "meaning": "boat",
+    "class": "L"
+  },
+  "36": {
+    "alphabet": "ล",
+    "meaning": "monkey",
+    "class": "L"
+  },
+  "37": {
+    "alphabet": "ว",
+    "meaning": "ring",
+    "class": "L"
+  },
+  "38": {
+    "alphabet": "ศ",
+    "meaning": "pavilion",
+    "class": "H"
+  },
+  "39": {
+    "alphabet": "ษ",
+    "meaning": "hermit",
+    "class": "H"
+  },
+  "40": {
+    "alphabet": "ส",
+    "meaning": "tiger",
+    "class": "H"
+  },
+  "41": {
+    "alphabet": "ห",
+    "meaning": "chest",
+    "class": "H"
+  },
+  "42": {
+    "alphabet": "ฬ",
+    "meaning": "kind_of_kite",
+    "class": "L"
+  },
+  "43": {
+    "alphabet": "อ",
+    "meaning": "basin",
+    "class": "S"
+  },
+  "44": {
+    "alphabet": "ฮ",
+    "meaning": "owl",
+    "class": "L"
+  }
+}

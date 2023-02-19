@@ -1,0 +1,53 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-display: fallback;
+	background-size: cover;
+	background-position: center;
+	line-height: 1.6;
+	text-align: center;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: 4px;
+}
+
+h3 {
+	font-size: 20px;
+	margin-bottom: 0px;
+}
+
+button {
+	display: contents;
+}
+
+em {
+	font-weight: 600;
+	font-style: normal;
+}
+
+.cta {
+	padding-bottom: 52px;
+}
+
+.cta a {
+	color: white;
+	text-decoration: none;
+	background-color: rgb(14, 101, 241);
+	padding: 8px 12px;
+	margin: 8px;
+	min-height: 36px;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+.cta a:hover {
+	background-color: rgb(66, 133, 244, 0.9);
+}

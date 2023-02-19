@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex's Thai Quiz</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="preload" as="font">
+<link href="/assets/celebration.png" rel="icon" type="image/jpg" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-light">
+    <div class="container py-4 px-3 mx-auto">
+      <h1>Alex's Thai Quiz</h1>
+      {{!-- Topic type --}}
+      <select id="select-topic-type">
+        <option value="0"> Consonant </option>
+        <option value="1"> Vowel </option>
+      </select>
+      {{!-- Quiz type --}}
+      <select id="select-quiz-type">
+        <option value="0"> Alphabet </option>
+        <option value="1"> Name Meaning </option>
+      </select>
+      <!-- Number of questions -->
+      <select id="select-question-num">
+        <option value="0"> All </option>
+        <option value="10"> 10 </option>
+        <option value="20"> 20 </option>
+      </select>
+    </div>
+    <!-- Description -->
+    <div class="container py-4 px-3 mx-auto">
+      <h1 id="description"></h1>
+    </div>
+    <!-- Display cards and list of answers -->
+    <div class="container" class="container py-4 px-3 mx-auto" style="text-align: -webkit-center; ">
+      <h1 id="list"></h1>
+    </div>
+    <div class="container py-2">
+      <button class="btn btn-primary" id="btn-restart">Restart</button>
+      <button class="btn btn-primary" id="btn-next">Next</button>
+    </div>
+    <div class="container py-2">
+      <button class="btn btn-primary" id="btn-answer">Check Answers</button>
+    </div>
+</body>
+</html>
+<script src="/assets/main.js"></script>
