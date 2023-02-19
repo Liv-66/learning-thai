@@ -1,5 +1,5 @@
 const express = require('express');
-const {readFileSync} = require('fs');
+const { readFileSync } = require('fs');
 const handlebars = require('handlebars');
 
 const app = express();

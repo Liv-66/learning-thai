@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {request} = require('gaxios');
+const { request } = require('gaxios');
 
 const port = process.env.PORT || '8080';
 const url = process.env.SERVICE_URL || `http://localhost:${port}`;
@@ -10,7 +10,7 @@ describe('Hello World', () => {
     console.log(`    - Requesting GET ${url}/...`);
     const res = await request({
       url: url + '/',
-      headers: {"Authorization": "Bearer " + token},
+      headers: { "Authorization": "Bearer " + token },
       timeout: 5000,
     });
 
